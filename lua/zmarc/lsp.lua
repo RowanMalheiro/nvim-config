@@ -81,9 +81,9 @@ local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- Example servers:
-lspconfig.lua_ls.setup({ capabilities = capabilities })
-lspconfig.pyright.setup({ capabilities = capabilities })
-lspconfig.bashls.setup({ capabilities = capabilities })
+vim.lsp.config.lua_ls = {}
+vim.lsp.config.pyright = {}
+vim.lsp.config.bashls = {}
 local rt = require("rust-tools")
 
 rt.setup({
