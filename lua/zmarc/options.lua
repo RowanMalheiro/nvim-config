@@ -1,0 +1,11 @@
+vim.opt.number = true
+vim.opt.expandtab = true
+vim.opt.relativenumber = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.smartindent = true
+vim.opt.wrap = false
+vim.opt.termguicolors = false
+vim.opt.cursorline = true
+vim.opt.scrolloff = 8
+vim.opt.hlsearch = true
