@@ -2,10 +2,23 @@ require("lazy").setup({
     {
         "rose-pine/neovim",
         name = "rose-pine",
+    },{
+        "romainl/vim-cool"  --hide highlights after searching
     },
     { 
         "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate"
+        build = ":TSUpdate",
+        config = function()
+
+            highlight = { enable = true }
+
+        end
+    },
+    {
+        "rmagatti/goto-preview",
+        dependencies = { "rmagatti/logger.nvim" },
+        event = "BufEnter",
+        config = true, -- necessary as per https://github.com/rmagatti/goto-preview/issues/88
     },
     {
         "nvim-tree/nvim-tree.lua",
@@ -41,5 +54,9 @@ require("lazy").setup({
             require('java').setup()
             vim.lsp.enable('jdtls')
         end,
-    }
+    },
 })
+
+require('goto-preview').setup {
+    default_mappings = true,
+}
